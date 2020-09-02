@@ -1,0 +1,85 @@
+*{
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body{
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  background: #F2F2F2;
+}
+.wrap {
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+}
+
+.wrap .formulario {
+ width: 100%;
+ margin: 20px 0px;
+ padding: 20px;
+ background: #fff;
+ border-top: 4px solid #536DFE;
+ box-shadow: 0 0 6px grey;
+overflow: hidden;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario textarea {
+  padding: 16px;
+  width: 100%;
+  height: 20px;
+ font-size: 1em;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  border: 1px solid #536DFE;
+  color:#141938;
+}
+.formulario input[type="text"]:focus,
+.formulario input[type="email"]:focus,
+.formulario textarea:focus {
+  border: 1px solid #3F51B5;
+  padding: 15px;
+}
+.formulario textarea {
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 150px;
+  max-height: 300px;
+}
+.formulario input[type="submit"] {
+  background: #ED572A;
+  padding: 15px;
+  border: none;
+  color: #E1E9FA;
+  font-size: 1em;
+  cursor: pointer;
+  float: right;
+  border-radius: 2px;
+}
+
+.formulario input[type="submit"] {
+  background: #E64A19;
+}
+
+.formulario  .alert {
+  padding: 1em;
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+
+.formulario  .alert.error {
+  background: #F2DEDE;
+  border:1px solid #a94442;
+	color: #a94442;
+
+}
+
+.formulario  .alert.succes{
+  background: #4CAF50;
+}
