@@ -1,0 +1,27 @@
+
+<?php 
+	$mejorHabitacion=ControladorInicio::ctrMejorHabitacion();
+
+	$traerFoto=ControladorInicio::ctrTraerFotoHabitacion($mejorHabitacion["mejor"]);
+
+	$traerFoto=json_decode($traerFoto["galeria"],true);
+
+ ?>
+
+<div class="card card-success card-outline">
+
+	<div class="card-header">
+		<h5 class="m-0">Habitación más reservada</h5>
+	</div>
+
+	<div class="card-body">
+
+		<img src="<?php echo $traerFoto[0]; ?> " class="img-thumbnail">
+
+		<h6 class="card-title py-3"><?php echo $mejorHabitacion["mejor"]; ?></h6>
+
+		<a href="reservas" class="btn btn-success">Ver reservas</a>
+
+	</div>
+
+</div>

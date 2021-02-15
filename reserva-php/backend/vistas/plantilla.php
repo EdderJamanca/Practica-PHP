@@ -2,6 +2,12 @@
 	session_start();
 	$ruta=RutaContralador::ctrRutaServidor();
 	$rutaFrom=RutaContralador::ctrRuta();
+
+	if(isset($_SESSION["idUsuarioB"])){
+
+		$admin=AdministradorControlador::ctrMostrarUsuario("id_admin",$_SESSION["idUsuarioB"]);
+		
+	}
  ?>
 
 <!DOCTYPE html>
@@ -47,7 +53,11 @@
 
 	<!-- DATEPICKER -->
 	<link rel="stylesheet" href="vistas/css/plugins/bootstrap-datepicker.min.css">
-	<!-- JS  -->
+    <!-- Morris chart -->
+	<link rel="stylesheet" href="vistas/css/plugins/morris.css">
+	<!--=============================================================
+						 JS  
+	=================================================================-->
 
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -93,6 +103,16 @@
 	<!-- CKEDITOR -->
 	<!-- https://ckeditor.com/ckeditor-5/#classic -->
 	<script src="vistas/js/plugins/ckeditor.js"></script>
+
+	 <!-- Morris chart -->
+	 <script src="vistas/js/plugins/morris.min.js"></script>
+	 <script src="vistas/js/plugins/raphael-min.js"></script>
+
+	<style>
+	.fc-today{
+		background:rgba(255,255,255,0) !important;
+	}
+	</style>
 
 </head>
 
@@ -165,6 +185,10 @@
 	<script src="vistas/js/habitacion.js"></script>
 	<script src="vistas/js/reservas.js"></script>
 	<script src="vistas/js/planes.js"></script>
+	<script src="vistas/js/testimonio.js"></script>
+	<script src="vistas/js/usuario.js"></script>
+	<script src="vistas/js/recorrido.js"></script>
+	<script src="vistas/js/restaurante.js"></script>
 
 </body>
 	

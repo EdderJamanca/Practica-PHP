@@ -32,10 +32,20 @@
 
     </section>
 
+  <!--=====================================
+  Módulo de gráfico de ventas
+  ======================================-->
+
 
     <section class="content">
 
       <div class="container-fluid">
+
+          <?php 
+
+              include "modulos/venta.php";
+              
+             ?>
 
         <div class="row">
 
@@ -66,7 +76,7 @@
 
                 	</thead>
                 	<tbody>
-                		<tr>
+ <!--                		<tr>
                   			<td>1</td>
                   			<td>O8NZJZULS</td>
                   			<td>Habitación suite Oriental-Plan Continental-2</td>
@@ -83,7 +93,7 @@
                             <i class="fas fa-trash-alt text-white"></i>
                           </button>
                         </td>
-                		</tr> 
+                		</tr>  -->
 
                 	</tbody>
                 	
@@ -116,7 +126,6 @@ Modal Editar Reserva
 
 		<div class="modal-content">
 
-			<form method="post">
         <!--Modal Header -->
 				<div class="modal-header bg-info">
 
@@ -171,7 +180,7 @@ Modal Editar Reserva
           <div class="bg-white p-4 calendarioReservas">
 
             <div class="infoDisponibilidad">
-              <h1 class="pb-5 float-left infoDisponibilidad">¡Está disponible!</h1>
+              
             </div>
 
             <div class="float-right pb-3">
@@ -197,7 +206,7 @@ Modal Editar Reserva
           <div class="clearfix"></div>
 
           <div class="agregarCalendario p-3">
-            <div id="calendar"></div>
+       <!--      <div id="calendar"></div> -->
           </div>
 
 						
@@ -211,13 +220,13 @@ Modal Editar Reserva
             <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
           </div>
           <div>
-            <button type="button" class="btn btn-primary guardarNuevaReserva" fechaIngreso fechaSalida idReserva>Cerrar</button>
+            <button type="button" class="btn btn-primary guardarNuevaReserva" fechaIngreso fechaSalida idReserva>Guardar</button>
           </div>
           
         </div>
 
 
-			</form>
+
 			
 		</div>
 		

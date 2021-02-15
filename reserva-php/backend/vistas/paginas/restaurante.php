@@ -53,7 +53,7 @@
 
               <div class="card-body">
 
-                <table class="table table-bordered table-striped tableRecorrido" width="100%">
+                <table class="table table-bordered table-striped tableRestaurante" width="100%">
 
                 	<thead>
 
@@ -68,7 +68,7 @@
 
                 	</thead>
                 	<tbody>
-                		<tr>
+<!--                 		<tr>
                 			<td>1</td>
                       <td><img src="vistas/img/restaurante/plato01.png" class="img-fluid" width="150px" alt=""></td>
                       <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo velit quis iusto magnam cupiditate dolorum repudiandae tempore cum minus eos a iure, officiis, eius, consequuntur unde nulla, enim quibusdam beatae.</td>
@@ -80,7 +80,7 @@
                                  
                                </div>
                 			</td>
-                		</tr> 
+                		</tr>  -->
                 	</tbody>
                 	
                 </table>
@@ -103,10 +103,10 @@
     <!-- /.content -->
   </div>
 <!--=====================================
-Modal Crear Recorrido crearRecorrido
+Modal Crear Restaurante
 ======================================-->
 
-<div class="modal" id="crearPlato">
+<div class="modal formulario" id="crearPlato">
 
   <div class="modal-dialog">
 
@@ -131,7 +131,7 @@ Modal Crear Recorrido crearRecorrido
 
                 <i class="fas fa-paperclip"></i> Adjuntar Imagen del plato
 
-                <input type="file" name="subirImgRestaurante">
+                <input type="file" name="subirImgRestaurante" >
                
             </div>
 
@@ -165,7 +165,12 @@ Modal Crear Recorrido crearRecorrido
         </div>
 
       </div>
+        <?php 
+            $nuevoPlato= new RestauranteControlador();
 
+            $nuevoPlato -> ctrNuevoRestaurante();
+
+         ?>
 
       </form>
 
@@ -175,10 +180,10 @@ Modal Crear Recorrido crearRecorrido
 
 </div>
 <!--=====================================
-Modal Ediatr Recorrido 
+Modal Ediatr Restaurante 
 ======================================-->
 
-<div class="modal" id="editarRecorrido">
+<div class="modal formulario" id="editarRecorrido">
 
   <div class="modal-dialog">
 
@@ -196,7 +201,7 @@ Modal Ediatr Recorrido
       <div class="modal-body">
 
         <div class="form-group">
-
+            <input type="hidden" name="idPlato">
           <div class="form-group my-2">
 
             <div class="btn btn-default btn-file">
@@ -204,12 +209,13 @@ Modal Ediatr Recorrido
                 <i class="fas fa-paperclip"></i> Adjuntar Imagen del plato
 
                 <input type="file" name="editarsubirImgRestaurante">
+                <input type="hidden" name="antiguoimgPlato">
                
             </div>
 
             <br>
 
-            <img class="EditPrevisualizarImgRestaurante img-fluid py-2">
+            <img class="EdiprevisualizarImgRestaurante img-fluid py-2">
 
              <p class="help-block small">Dimensiones: 169px x 169px | Peso Max. 2MB | Formato: JPG o PNG</p>
 
@@ -237,7 +243,11 @@ Modal Ediatr Recorrido
         </div>
 
       </div>
+          <?php 
+                $editarPlato=new RestauranteControlador();
 
+                $editarPlato ->ctraAcualizarRestaurante();
+           ?>
 
       </form>
 

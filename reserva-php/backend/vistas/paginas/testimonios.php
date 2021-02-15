@@ -58,13 +58,13 @@
                 			<th>Habitación</th>
                 			<th>Testimonio</th>
                 			<th>Estado</th>
-                      <td>Fecha</td>
+                      <th>Fecha</th>
                 			
                 		</tr>
 
                 	</thead>
                 	<tbody>
-                		<tr>
+<!--                 		<tr>
                 			<td>1</td>
                       <td>O8NZJZULS</td>
                 			<td>Hotel Portobelo</td>
@@ -73,7 +73,7 @@
                 			<td><button class="btn btn-info text-white btn-sm">Activo</button></td>
                 			<td>
                           2020-01-18
-                			</td>
+                			</td> -->
                 		</tr> 
                 	</tbody>
                 	

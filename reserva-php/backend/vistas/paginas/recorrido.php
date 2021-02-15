@@ -70,11 +70,11 @@
 
                 	</thead>
                 	<tbody>
-                		<tr>
+ <!--                		<tr>
                 			<td>1</td>
                       <td>Lorem Ipsum</td>
                       <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo velit quis iusto magnam cupiditate dolorum repudiandae tempore cum minus eos a iure, officiis, eius, consequuntur unde nulla, enim quibusdam beatae.</td>
-                			<td><img src="vistas/img/recorrido/pueblo01b.png" alt="" class="img-fluid" width="50px"></td>
+                			<td></td>
                 			<td><img src="vistas/img/recorrido/pueblo01a.png" alt="" class="img-fluid" width="50px"></td>
                 			<td>
                           <div class="btn-group">
@@ -84,7 +84,7 @@
                                  
                                </div>
                 			</td>
-                		</tr> 
+                		</tr> --> 
                 	</tbody>
                 	
                 </table>
@@ -116,7 +116,7 @@ Modal Crear Recorrido crearRecorrido
 
      <div class="modal-content">
 
-        <form method="post" enctype="multipart/form-data"></form>
+        <form method="post" enctype="multipart/form-data">
 
         <!-- Modal Header -->
 
@@ -147,7 +147,7 @@ Modal Crear Recorrido crearRecorrido
 
               <div class="input-group my-3">
 
-                <textarea name="descripcionRecorrido" class="form-control" maxlength="220" placeholder="Ingrese la descripción del recorrido"></textarea>
+                <textarea  name="descripcionRecorrido" class="form-control descripcionRecorrido w-100" maxlength="220" placeholder="Ingrese la descripción del recorrido"></textarea>
                 
               </div>
               <!-- subir foto pequeña -->
@@ -179,7 +179,7 @@ Modal Crear Recorrido crearRecorrido
 
                        <i class="fas fa-paperclip"></i>Adjuntar Imagen Grande del Recorrido
 
-                       <input type="file" name="subirImgPeqRecorrido">
+                       <input type="file" name="subirImgGraRecorrido">
                    
                     </div>
                     <img class="previsualizarImgGrandeRecorrido img-fluid py-2" alt="">
@@ -204,6 +204,11 @@ Modal Crear Recorrido crearRecorrido
               </div>
 
             </div>
+            <?php 
+              $nuevoRecorrido = new RecorridoControlador();
+              $nuevoRecorrido->ctrNuevoRecorrido();
+             ?>
+          </form>
        
      </div>
     
@@ -212,7 +217,7 @@ Modal Crear Recorrido crearRecorrido
 </div>
 
 <!--=====================================
-Modal Crear Recorrido 
+Modal editar Recorrido 
 ======================================-->
 
 <div class="modal" id="editarRecorrido">
@@ -221,7 +226,7 @@ Modal Crear Recorrido
 
      <div class="modal-content">
 
-        <form method="post" enctype="multipart/form-data"></form>
+        <form method="post" enctype="multipart/form-data">
 
         <!-- Modal Header -->
 
@@ -243,7 +248,7 @@ Modal Crear Recorrido
                   <span class="fas fa-suitcase-rolling"></span>
                   
                 </div>
-
+                <input type="hidden" name="idrecorrido">
                 <input type="text" class="form-control" name="editartituloRecorrido" placeholder="Ingresa el Título del recorrido" required>
 
               </div>
@@ -265,9 +270,10 @@ Modal Crear Recorrido
                        <i class="fas fa-paperclip"></i>Adjuntar Imagen Pequeñas del Recorrido
 
                        <input type="file" name="EditarsubirImgPeqRecorrido">
+                       <input type="hidden" name="imgPeAntigua">
                    
                     </div>
-                    <img class="EditarPrevisualizarImgRecorrido img-fluid py-2" alt="">
+                    <img class="previsualizarImgRecorrido img-fluid py-2" name="previsualizarImgRecorrido" alt="">
 
                      <p class="help-block small">Dimensiones: 455px x 280px | Peso Max. 2MB | Formato: JPG o PNG</p>
                     
@@ -284,10 +290,11 @@ Modal Crear Recorrido
 
                        <i class="fas fa-paperclip"></i>Adjuntar Imagen Grande del Recorrido
 
-                       <input type="file" name="EditarSubirImgPeqRecorrido">
+                       <input type="file" name="EditarSubirImgGraRecorrido">
+                       <input type="hidden" name="imgGranAntigua">
                    
                     </div>
-                    <img class="EditprevisualizarImgGrandeRecorrido img-fluid py-2" alt="">
+                    <img class="previsualizarImgGrandeRecorrido img-fluid py-2" alt="">
 
                      <p class="help-block small">Dimensiones: 650px x 450px | Peso Max. 2MB | Formato: JPG o PNG</p>
                     
@@ -309,6 +316,14 @@ Modal Crear Recorrido
               </div>
 
             </div>
+
+            <?php 
+                $actualizarRecorrido = new RecorridoControlador();
+
+                 $actualizarRecorrido ->ctrActualizarRecorrido();
+             ?>
+
+        </form>
        
      </div>
     
